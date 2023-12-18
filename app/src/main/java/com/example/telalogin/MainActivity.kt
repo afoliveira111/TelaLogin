@@ -83,7 +83,12 @@ fun AuthScreen() {
             label = {
                 Text("Senha")
             },
-            visualTransformation = PasswordVisualTransformation()
+            visualTransformation = PasswordVisualTransformation(),
+            leadingIcon = {
+                Icon(
+                    imageVector = Icons.Default.,
+                    contentDescription = "pessoa que representa usuário")
+            }
         )
         Button(
             onClick = { /*TODO*/ },
