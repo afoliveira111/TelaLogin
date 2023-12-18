@@ -60,6 +60,9 @@ fun AuthScreen() {
             Modifier
                 .padding(8.dp)
                 .fillMaxWidth(),
+            label = {
+                Text("Usuário")
+            }
         )
 
         TextField(
@@ -71,6 +74,9 @@ fun AuthScreen() {
                 .padding(8.dp)
                 .fillMaxWidth(),
 
+            label = {
+                Text("Senha")
+            },
             visualTransformation = PasswordVisualTransformation()
         )
         Button(
