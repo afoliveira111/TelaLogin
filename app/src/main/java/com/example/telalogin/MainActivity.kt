@@ -1,6 +1,7 @@
 package com.example.telalogin
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Column
@@ -9,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountCircle
+import androidx.compose.material.icons.filled.Password
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -37,7 +39,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    AuthScreen()
+                    AuthScreen(onEnterClick = {
+                        Log.i("MainActivity", "onCreate: $it" )
+                    })
                 }
             }
         }
@@ -46,7 +50,9 @@ class MainActivity : ComponentActivity() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AuthScreen() {
+fun AuthScreen(
+    onEnterClick: (User) -> Unit
+) {
     Column {
         var username by remember {
             mutableStateOf("")
@@ -67,7 +73,10 @@ fun AuthScreen() {
                 Text("Usuário")
             },
             leadingIcon = {
-                Icon(imageVector = Icons.Default.AccountCircle, contentDescription = "pessoa que representa usuário")
+                Icon(
+                    imageVector = Icons.Default.AccountCircle,
+                    contentDescription = "pessoa que representa usuário"
+                )
             }
         )
 
@@ -86,12 +95,20 @@ fun AuthScreen() {
             visualTransformation = PasswordVisualTransformation(),
             leadingIcon = {
                 Icon(
-                    imageVector = Icons.Default.,
-                    contentDescription = "pessoa que representa usuário")
+                    imageVector = Icons.Default.Password,
+                    contentDescription = "representação de senha"
+                )
             }
         )
         Button(
-            onClick = { /*TODO*/ },
+            onClick = {
+                onEnterClick(
+                    User(
+                        username,
+                        password
+                    )
+                )
+            },
             Modifier
                 .padding(8.dp)
                 .fillMaxWidth(),
