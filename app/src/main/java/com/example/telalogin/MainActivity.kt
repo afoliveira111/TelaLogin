@@ -7,8 +7,11 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -62,6 +65,9 @@ fun AuthScreen() {
                 .fillMaxWidth(),
             label = {
                 Text("Usuário")
+            },
+            leadingIcon = {
+                Icon(imageVector = Icons.Default.AccountCircle, contentDescription = "pessoa que representa usuário")
             }
         )
 
