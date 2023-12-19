@@ -38,7 +38,7 @@ Criando em Compose uma tela para login e senha.
 - Novas funcionalidades
 
 ## Author
-Antonio Felipe Oliveira (follow me on www.linkedin.com/in/id-antonio-felipe)
+Antonio Felipe Oliveira (www.linkedin.com/in/id-antonio-felipe)
 
 ## License
 ```
