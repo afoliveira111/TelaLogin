@@ -14,19 +14,13 @@ Criando em Compose uma tela para login e senha.
 
 * Android ViewModel e LiveData: O ViewModel é usado para gerenciar e reter dados relacionados à interface do usuário, enquanto o LiveData é usado para atualizar automaticamente a interface do usuário com base nos dados observados.
 
-* Material Design Components: O código faz uso de componentes do Material Design, incluindo TextField, Button, Icon, etc.
-
 * State Management: O código utiliza o gerenciamento de estado por meio do uso do **remember** para reter e reagir a alterações de estado.
-
-* Modifiers: O código faz uso extensivo de modificadores no Jetpack Compose para ajustar o layout e o estilo dos elementos da interface do usuário.
 
 * Logging: Há o uso da função Log.i para imprimir mensagens de log no console do Android.
 
 * Data Class: A classe User é uma data class, um recurso do Kotlin para modelar dados imutáveis.
 
 * Temas e Estilos: Há referências a temas e estilos no código, que estão vinculados ao tema geral do aplicativo.
-
-* Previews: O código faz uso de anotações @Preview para fornecer visualizações no Android Studio.
 
 * Gradle Build System: O projeto Android é construído usando o sistema de compilação Gradle, e dependências são gerenciadas no arquivo build.gradle.
 
