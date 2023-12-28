@@ -29,7 +29,11 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.example.telalogin.ui.theme.TelaLoginTheme
+import kotlinx.coroutines.MainScope
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,9 +45,21 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    AuthScreen(onEnterClick = {
-                        Log.i("MainActivity", "onCreate: $it" )
-                    })
+                    val navController = rememberNavController()
+                    NavHost(navController = navController, startDestination = "main") {
+                        composable("main") {
+                            MainScreen(user = "")
+                        }
+                        composable("signIn") {
+                            SignInScreen(
+
+                            )
+                    }
+
+
+                    //AuthScreen(onEnterClick = {
+                       // Log.i("MainActivity", "onCreate: $it" ))
+                    }
                 }
             }
         }
