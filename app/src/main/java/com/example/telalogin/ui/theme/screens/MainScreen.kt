@@ -22,9 +22,6 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import androidx.compose.ui.unit.dp
-import br.com.alexfelipe.authapp.models.Product
-import br.com.alexfelipe.authapp.ui.theme.AuthAppTheme
-import coil.compose.AsyncImage
 import com.example.telalogin.ui.theme.TelaLoginTheme
 import java.math.BigDecimal
 import kotlin.random.Random
