@@ -1,4 +1,4 @@
-package com.example.telalogin
+package com.example.telalogin.models
 
 data class User (
     val username: String,
