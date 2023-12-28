@@ -25,6 +25,7 @@ import androidx.compose.ui.unit.dp
 import br.com.alexfelipe.authapp.models.Product
 import br.com.alexfelipe.authapp.ui.theme.AuthAppTheme
 import coil.compose.AsyncImage
+import com.example.telalogin.ui.theme.TelaLoginTheme
 import java.math.BigDecimal
 import kotlin.random.Random
 
@@ -100,7 +101,7 @@ private fun sampleProducts(amount: Int) =
 @Preview
 @Composable
 fun MainScreenPreview() {
-    telaloginTheme {
+    TelaLoginTheme {
         Surface(
             Modifier.fillMaxSize(),
             color = MaterialTheme.colorScheme.background

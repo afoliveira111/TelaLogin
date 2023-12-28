@@ -13,7 +13,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -24,13 +23,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.telalogin.models.User
 import com.example.telalogin.ui.theme.TelaLoginTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun SignInScreen(
-    onSignInClick: (User) -> Unit,
+fun SignUpScreen(
     onSignUpClick: () -> Unit
 ) {
     Column {
@@ -38,6 +35,9 @@ fun SignInScreen(
             mutableStateOf("")
         }
         var password by remember {
+            mutableStateOf("")
+        }
+        var confirmPassword by remember {
             mutableStateOf("")
         }
         TextField(
@@ -77,45 +77,46 @@ fun SignInScreen(
                 )
             }
         )
-        Button(
-            onClick = {
-                onSignInClick(
-                    User(
-                        username,
-                        password
-                    )
-                )
+        TextField(
+            value = confirmPassword,
+            onValueChange = {
+                confirmPassword = it
             },
             Modifier
                 .padding(8.dp)
                 .fillMaxWidth(),
-        ) {
-            Text(text = "Entrar")
-        }
-        TextButton(
-            onClick = { onSignUpClick() },
+            label = {
+                Text("Confirmar senha")
+            },
+            visualTransformation = PasswordVisualTransformation(),
+            leadingIcon = {
+                Icon(
+                    imageVector = Icons.Default.Password,
+                    contentDescription = "representação de senha"
+                )
+            }
+        )
+        Button(
+            onClick = onSignUpClick,
             Modifier
                 .padding(8.dp)
-                .fillMaxWidth()
+                .fillMaxWidth(),
         ) {
             Text(text = "Cadastrar")
         }
     }
-}
 
+}
 
 @Preview
 @Composable
-fun SignInScreenPreview() {
+fun SignUpScreenPreview() {
     TelaLoginTheme {
         Surface(
-            modifier = Modifier.fillMaxSize(),
+            Modifier.fillMaxSize(),
             color = MaterialTheme.colorScheme.background
         ) {
-            SignInScreen(
-                onSignInClick = {},
-                onSignUpClick = {}
-            )
+            SignUpScreen(onSignUpClick = {})
         }
     }
 }
