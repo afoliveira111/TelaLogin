@@ -22,6 +22,8 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import androidx.compose.ui.unit.dp
+import coil.compose.AsyncImage
+import com.example.telalogin.models.Product
 import com.example.telalogin.ui.theme.TelaLoginTheme
 import java.math.BigDecimal
 import kotlin.random.Random
@@ -103,7 +105,7 @@ fun MainScreenPreview() {
             Modifier.fillMaxSize(),
             color = MaterialTheme.colorScheme.background
         ) {
-            MainScreen("alex")
+            MainScreen("felipe")
         }
     }
 }
