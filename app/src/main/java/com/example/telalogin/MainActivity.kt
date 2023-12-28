@@ -1,7 +1,6 @@
 package com.example.telalogin
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Column
@@ -33,7 +32,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.telalogin.ui.theme.TelaLoginTheme
-import kotlinx.coroutines.MainScope
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,13 +50,15 @@ class MainActivity : ComponentActivity() {
                         }
                         composable("signIn") {
                             SignInScreen(
-
+                                onSignInClick = {},
+                                onSignUpClick = {}
                             )
-                    }
-
-
-                    //AuthScreen(onEnterClick = {
-                       // Log.i("MainActivity", "onCreate: $it" ))
+                        }
+                        composable("signUp") {
+                            SignUpScreen(
+                                onSignUpClick = {}
+                            )
+                        }
                     }
                 }
             }
@@ -152,13 +152,13 @@ fun AuthScreen(
 
 @Preview
 @Composable
-fun AuthScreenPreview() {
+fun MainScreenPreview() {
     TelaLoginTheme {
         Surface(
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colorScheme.background
         ) {
-            AuthScreen(onEnterClick = {})
+           MainScreen("Felipe")
         }
     }
 }
