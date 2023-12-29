@@ -5,8 +5,12 @@ Criando em Compose uma tela para login e senha.
 
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->
+<table>
+  <tr>
+    </td><td><img src="/result/Screenshot_1.png" width="260"></td><td><img src="/result/Screenshot_2.png" width="260"><td><img src="/result/Screenshot_3.png" width="260"><td><img src="/result/Screenshot_4.png" width="260">
+  </tr>
+</table>
 
-<img src="/result/Screenshot_20231219_094345.png" width="260">&emsp;
 
 
 ## Tecnologias
