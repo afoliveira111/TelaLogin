@@ -14,10 +14,10 @@
 
 
 ## Tecnologias Utilizadas
-    Kotlin
-    Jetpack Compose
-    Android Navigation Component
-    Android Material3
+ *   Kotlin
+ *   Jetpack Compose
+ *   Android Navigation Component
+ *   Android Material3
 
   
   ## UI (Interface do Usuário):
