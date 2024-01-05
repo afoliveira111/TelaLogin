@@ -30,10 +30,10 @@
 ## Estrutura do Projeto
 O projeto está estruturado da seguinte forma:
 
-    MainActivity.kt: Contém a lógica principal do aplicativo, configuração do Compose e definição do fluxo de navegação.
-    MainScreen.kt: Implementação da tela principal do aplicativo.
-    SignInScreen.kt: Implementação da tela de login.
-    SignUpScreen.kt: Implementação da tela de cadastro.
+  * MainActivity.kt: Contém a lógica principal do aplicativo, configuração do Compose e definição do fluxo de navegação.
+  * MainScreen.kt: Implementação da tela principal do aplicativo.
+  * SignInScreen.kt: Implementação da tela de login.
+  * SignUpScreen.kt: Implementação da tela de cadastro.
     
 ## Fluxo de Navegação
 O aplicativo utiliza o Android Navigation Component para gerenciar o fluxo de navegação entre as telas. As principais rotas são:
