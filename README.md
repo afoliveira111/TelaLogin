@@ -38,9 +38,9 @@ O projeto está estruturado da seguinte forma:
 ## Fluxo de Navegação
 O aplicativo utiliza o Android Navigation Component para gerenciar o fluxo de navegação entre as telas. As principais rotas são:
 
-    main/{user}: Tela principal que recebe o nome do usuário como parâmetro.
-    signIn: Tela de login.
-    signUp: Tela de cadastro.
+  * main/{user}: Tela principal que recebe o nome do usuário como parâmetro.
+  * signIn: Tela de login.
+  * signUp: Tela de cadastro.
     
     
 ### TODO
