@@ -1,4 +1,4 @@
-package com.example.telalogin
+package com.example.telalogin.models
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -22,7 +22,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             TelaLoginTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
@@ -40,11 +39,10 @@ class MainActivity : ComponentActivity() {
                             SignInScreen(
                                 onSignInClick = { user ->
                                     navController.navigate("main/${user.username}")
-                                },
-                                onSignUpClick = {
-                                    navController.navigate("signUp")
                                 }
-                            )
+                            ) {
+                                navController.navigate("signUp")
+                            }
                         }
                         composable("signUp") {
                             SignUpScreen(

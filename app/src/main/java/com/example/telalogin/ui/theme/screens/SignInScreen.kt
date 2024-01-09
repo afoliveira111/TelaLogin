@@ -20,6 +20,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
@@ -33,21 +34,23 @@ fun SignInScreen(
     onSignInClick: (User) -> Unit,
     onSignUpClick: () -> Unit
 ) {
-    Column {
-        var username by remember {
-            mutableStateOf("")
-        }
-        var password by remember {
-            mutableStateOf("")
-        }
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(4.dp)
+    ) {
+        var username by remember { mutableStateOf("") }
+        var password by remember { mutableStateOf("") }
+
         TextField(
             value = username,
             onValueChange = { newValue ->
                 username = newValue
             },
-            Modifier
+            modifier = Modifier
                 .padding(8.dp)
-                .fillMaxWidth(),
+                .fillMaxWidth()
+                .align(Alignment.CenterHorizontally),
             label = {
                 Text("Usuário")
             },
@@ -63,9 +66,10 @@ fun SignInScreen(
             onValueChange = {
                 password = it
             },
-            Modifier
+            modifier = Modifier
                 .padding(8.dp)
-                .fillMaxWidth(),
+                .fillMaxWidth()
+                .align(Alignment.CenterHorizontally),
             label = {
                 Text("Senha")
             },
@@ -77,32 +81,30 @@ fun SignInScreen(
                 )
             }
         )
+
         Button(
             onClick = {
-                onSignInClick(
-                    User(
-                        username,
-                        password
-                    )
-                )
+                onSignInClick(User(username, password))
             },
-            Modifier
+            modifier = Modifier
                 .padding(8.dp)
-                .fillMaxWidth(),
+                .fillMaxWidth()
+                .align(Alignment.CenterHorizontally)
         ) {
             Text(text = "Entrar")
         }
+
         TextButton(
             onClick = { onSignUpClick() },
-            Modifier
+            modifier = Modifier
                 .padding(8.dp)
                 .fillMaxWidth()
+                .align(Alignment.CenterHorizontally)
         ) {
             Text(text = "Cadastrar")
         }
     }
 }
-
 
 @Preview
 @Composable
@@ -113,9 +115,8 @@ fun SignInScreenPreview() {
             color = MaterialTheme.colorScheme.background
         ) {
             SignInScreen(
-                onSignInClick = {},
-                onSignUpClick = {}
-            )
+                onSignInClick = {}
+            ) {}
         }
     }
 }
