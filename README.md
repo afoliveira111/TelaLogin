@@ -1,43 +1,53 @@
-## Tela de Login
-Criando em Compose uma tela para login e senha.
+## Tela de Login com Kotlin e Compose
+  Um aplicativo simples de tela de login desenvolvido em Kotlin utilizando Jetpack Compose.
 
 
 
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->
+<table>
+  <tr>
+    </td><td><img src="/result/Screenshot_1.png" width="260"></td><td><img src="/result/Screenshot_2.png" width="260"><td><img src="/result/Screenshot_3.png" width="260"><td><img src="/result/Screenshot_4.png" width="260">
+  </tr>
+</table>
 
-<img src="/result/Screenshot_20231219_094345.png" width="260">&emsp;
 
 
-## Tecnologias
-* Android Compose: O código faz uso do Jetpack Compose, uma biblioteca moderna para a construção de interfaces do usuário no Android com Kotlin.
-
-* Android ViewModel e LiveData: O ViewModel é usado para gerenciar e reter dados relacionados à interface do usuário, enquanto o LiveData é usado para atualizar automaticamente a interface do usuário com base nos dados observados.
-
-* State Management: O código utiliza o gerenciamento de estado por meio do uso do **remember** para reter e reagir a alterações de estado.
-
-* Logging: Há o uso da função Log.i para imprimir mensagens de log no console do Android.
-
-* Data Class: A classe User é uma data class, um recurso do Kotlin para modelar dados imutáveis.
-
-* Temas e Estilos: Há referências a temas e estilos no código, que estão vinculados ao tema geral do aplicativo.
-
-* Gradle Build System: O projeto Android é construído usando o sistema de compilação Gradle, e dependências são gerenciadas no arquivo build.gradle.
+## Tecnologias Utilizadas
+ *   Kotlin
+ *   Jetpack Compose
+ *   Android Navigation Component
+ *   Android Material3
 
   
   ## UI (Interface do Usuário):
-    * Material Design Components: Componentes do Material Design, como TextField, Button, e Icon, para uma aparência consistente e seguindo as diretrizes de design do Material.
+   * Material Design Components: Componentes do Material Design, como TextField, Button, e Icon, para uma aparência consistente e seguindo as diretrizes de design do Material.
       
-    * Modifiers: Modificadores do Jetpack Compose são usados para ajustar o layout e o estilo dos elementos da interface do usuário.
+   *  Modifiers: Modificadores do Jetpack Compose são usados para ajustar o layout e o estilo dos elementos da interface do usuário.
       
-    * Preview: Anotações @Preview são utilizadas para fornecer visualizações no Android Studio.
+   *  Preview: Anotações @Preview são utilizadas para fornecer visualizações no Android Studio.
 
+## Estrutura do Projeto
+O projeto está estruturado da seguinte forma:
 
+  * MainActivity.kt: Contém a lógica principal do aplicativo, configuração do Compose e definição do fluxo de navegação.
+  * MainScreen.kt: Implementação da tela principal do aplicativo.
+  * SignInScreen.kt: Implementação da tela de login.
+  * SignUpScreen.kt: Implementação da tela de cadastro.
+    
+## Fluxo de Navegação
+O aplicativo utiliza o Android Navigation Component para gerenciar o fluxo de navegação entre as telas. As principais rotas são:
+
+  * main/{user}: Tela principal que recebe o nome do usuário como parâmetro.
+  * signIn: Tela de login.
+  * signUp: Tela de cadastro.
+    
+    
 ### TODO
 - Melhorar estilização do app
 - Novas funcionalidades
 
-## Author
+## Autor
 Antonio Felipe Oliveira (www.linkedin.com/in/id-antonio-felipe)
 
 ## License
