@@ -46,7 +46,9 @@ O aplicativo utiliza o Android Navigation Component para gerenciar o fluxo de na
 - Novas funcionalidades
 
 ## Autor
-Antonio Felipe Oliveira (www.linkedin.com/in/id-antonio-felipe)
+Antonio Felipe Oliveira 
+
+www.linkedin.com/in/id-antonio-felipe
 
 ## License
 ```
