@@ -21,10 +21,8 @@
 
   
   ## UI (Interface do Usuário):
-   * Material Design Components: Componentes do Material Design, como TextField, Button, e Icon, para uma aparência consistente e seguindo as diretrizes de design do Material.
-      
-   *  Modifiers: Modificadores do Jetpack Compose são usados para ajustar o layout e o estilo dos elementos da interface do usuário.
-      
+   * Material Design Components: Componentes do Material Design, como TextField, Button, e Icon, para uma aparência consistente e seguindo as diretrizes de design do Material.      
+   *  Modifiers: Modificadores do Jetpack Compose são usados para ajustar o layout e o estilo dos elementos da interface do usuário.      
    *  Preview: Anotações @Preview são utilizadas para fornecer visualizações no Android Studio.
 
 ## Estrutura do Projeto
